@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "prettier --write ./pages/ --config .prettierrc",
     "export": "next export"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.4.4",
+    "add": "^2.0.6",
     "next": "12.1.5",
+    "prettier": "^2.6.2",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "yarn": "^1.22.18"
   },
   "devDependencies": {
     "@types/node": "17.0.25",
