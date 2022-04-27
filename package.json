@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "prettier --write ./pages/ --config .prettierrc",
+    "lint": "prettier --write ./src/ --config .prettierrc",
     "export": "next export"
   },
   "dependencies": {

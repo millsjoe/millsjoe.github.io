@@ -3,8 +3,8 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import styles from "../styles/Home.module.css";
 import { Colours } from "../styles/colours";
-import About from "../src/components/about";
-import Header from "../src/components/header";
+import About from "../components/about";
+import Header from "../components/header";
 
 const Home: NextPage = () => {
     return (
