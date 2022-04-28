@@ -4,34 +4,29 @@ import Qualification from "./qualification";
 
 const Education = () => {
     return (
-        <div className="qualification__list">
-            <ParallaxLayer
-                offset={1}
-                speed={0.5}
-                style={{
-                    color: "white",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexWrap: "nowrap",
-                }}
-            >
-                <Qualification
-                    school="University of Leeds"
-                    grade="First"
-                    degree="Computer Science"
-                    degreeLevel="Bsc"
-                    imgSrc="tbc"
-                />
+        <div
+            className="qualification__list"
+            style={{
+                display: "flex",
+                flexDirection: "column",
+            }}
+        >
+            <p>I have the following qualifications</p>
+            <Qualification
+                school="University of Leeds"
+                grade="First"
+                degree="Computer Science"
+                degreeLevel="Bsc"
+                imgSrc="/uol.png"
+            />
 
-                <Qualification
-                    school="Sheffield Hallam University"
-                    grade="First"
-                    degree="Digital and Technology Solutions"
-                    degreeLevel="Msc"
-                    imgSrc="tbc"
-                />
-            </ParallaxLayer>
+            <Qualification
+                school="Sheffield Hallam University"
+                grade="First"
+                degree="Digital and Technology Solutions"
+                degreeLevel="Msc"
+                imgSrc="/uol.png"
+            />
         </div>
     );
 };

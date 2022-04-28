@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface IQualifictation {
@@ -7,12 +8,14 @@ interface IQualifictation {
     school: string;
     imgSrc: string;
 }
+
 const Qualification = (props: IQualifictation) => {
     return (
-        <div className="qualification_object" style={{ padding: "2rem" }}>
-            <h2>{props.degree}</h2>
-            <h3>{props.degreeLevel}</h3>
-            <h4>{props.school}</h4>
+        <div className="qualification_object">
+            {/* <Image src={props.imgSrc} width="100px" height="100px" /> */}
+            <p>{props.degree}</p>
+            <p>{props.degreeLevel}</p>
+            <p>{props.school}</p>
         </div>
     );
 };
