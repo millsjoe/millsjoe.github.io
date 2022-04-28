@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production"
+const nextConfig = {
+    assetPrefix: "",
+};
 
-module.exports = {
-  assetPrefix: isProd ? "/mills.github.io/" : ""
-}
+module.exports = nextConfig;
