@@ -10,12 +10,16 @@
         "export": "next export"
     },
     "dependencies": {
+        "@mantine/core": "^4.2.2",
+        "@mantine/hooks": "^4.2.2",
+        "@mantine/next": "^4.2.2",
         "@react-spring/parallax": "9.4.5-beta.1",
         "add": "^2.0.6",
         "next": "12.1.5",
         "prettier": "^2.6.2",
         "react": "18.0.0",
         "react-dom": "18.0.0",
+        "react-icons": "^4.3.1",
         "yarn": "^1.22.18"
     },
     "devDependencies": {
