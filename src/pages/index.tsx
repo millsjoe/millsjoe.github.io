@@ -1,29 +1,37 @@
+import {
+    Center,
+    ColorScheme,
+    ColorSchemeProvider,
+    Container,
+    MantineProvider,
+} from "@mantine/core";
 import type { NextPage } from "next";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import terminal from "../../public/terminal.png";
-import styles from "../styles/Home.module.css";
-import { Colours } from "../styles/colours";
+import { useState } from "react";
 import About from "../components/about";
 import Header from "../components/header";
-import Image from "next/image";
-import { MantineProvider } from "@mantine/core";
 
 const Home: NextPage = () => {
+    const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+    const toggleColorScheme = (value?: ColorScheme) =>
+        setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
     return (
-        <MantineProvider>
-            <Parallax pages={2} style={{ top: "0", left: "0" }}>
-                <ParallaxLayer offset={0} speed={0} />
-                <div className={styles.container}>
-                    <Header />
-                    <ParallaxLayer
-                        offset={1}
-                        speed={2}
-                        style={{ backgroundColor: Colours.darkPrimary }}
-                    />
+        <ColorSchemeProvider
+            colorScheme={colorScheme}
+            toggleColorScheme={toggleColorScheme}
+        >
+            <MantineProvider
+                theme={{ colorScheme }}
+                withGlobalStyles
+                withNormalizeCSS
+            >
+                <Container>
+                    <Center>
+                        <Header />
+                    </Center>
                     <About />
-                </div>
-            </Parallax>
-        </MantineProvider>
+                </Container>
+            </MantineProvider>
+        </ColorSchemeProvider>
     );
 };
 

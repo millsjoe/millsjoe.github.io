@@ -374,60 +374,6 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
-"@react-spring/animated@~9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.4.5-beta.1.tgz#487e1e943ba1788dec9942a67ea8a7cf8018f5be"
-  integrity sha512-52vHhd0wYkAeQaU6celeZtrXJaOVvKo+5d8keAG3aY9NJs2YDARPg9uu8lLVf+fRTnruSb+gfFxsCTnq3g7OUQ==
-  dependencies:
-    "@react-spring/shared" "~9.4.5-beta.1"
-    "@react-spring/types" "~9.4.5-beta.1"
-
-"@react-spring/core@~9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.4.5-beta.1.tgz#fad45301c06e0f03cf13087ac1055292df82ee9f"
-  integrity sha512-t7rFpy0jWLKqWqsdfgCijxgX9AN3MCS8Iu66cSbRzf56Eli7UO1su2mH6YERrlIo+4TeDnm2Hz23QiC6tzsO+w==
-  dependencies:
-    "@react-spring/animated" "~9.4.5-beta.1"
-    "@react-spring/rafz" "~9.4.5-beta.1"
-    "@react-spring/shared" "~9.4.5-beta.1"
-    "@react-spring/types" "~9.4.5-beta.1"
-
-"@react-spring/parallax@9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/parallax/-/parallax-9.4.5-beta.1.tgz#7e9446a5eb97e52b4af299ee56cf1743383b1346"
-  integrity sha512-pIeEVUQ+96t89mQFm8nfIXfcTP8hoCnx5jTcOuKoYkF9bxhvB6vJ7AhA9y96dl9uI0bSuCzryBtBaGr1LxG7pQ==
-  dependencies:
-    "@react-spring/shared" "~9.4.5-beta.1"
-    "@react-spring/web" "~9.4.5-beta.1"
-
-"@react-spring/rafz@~9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.4.5-beta.1.tgz#749962449d2f8a77ca826b7a2562a782aa4da3fa"
-  integrity sha512-hORwrd0LJRnKEdVmQyUCv+4oVqNkpTc/9/6BC0IfyXSIzUkYs/LUkOeXD811gFR07UBVScSbWXXNgLBJY+pNlg==
-
-"@react-spring/shared@~9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.4.5-beta.1.tgz#999ffe99f9796776477733afd2e038a9f2fdf956"
-  integrity sha512-EHAWYn/Hl6ec6/oBWVvxqm3Tl3dVZ+HmeaBssmqWqbHSfexJOiwmXLdRN18rRuNbnzmmfLkDWbe1RLUHJwLOIQ==
-  dependencies:
-    "@react-spring/rafz" "~9.4.5-beta.1"
-    "@react-spring/types" "~9.4.5-beta.1"
-
-"@react-spring/types@~9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.4.5-beta.1.tgz#428e49d3395d383eb6e679762b6ce50c8bc7309e"
-  integrity sha512-i5GLUdu1EQHbCl54QE5/Ro1Ck4IQvTcLZ7HKG3/0HoLNHVjTAtfu4OCFaAXvwCsBdAD8BhROM6Tec1FLt6nImA==
-
-"@react-spring/web@~9.4.5-beta.1":
-  version "9.4.5-beta.1"
-  resolved "https://registry.yarnpkg.com/@react-spring/web/-/web-9.4.5-beta.1.tgz#909c6b1eb12ecb9a90b7e0a612ee4761bc41bfaa"
-  integrity sha512-N/Mb6TJgzfnkSrjAbFhhPsvN4BJ73Z6v8zbXNDdmH9Lckxbg6UlVnY23AqtwmyVMTrC87QnQdZg0fLBBNQJ9OA==
-  dependencies:
-    "@react-spring/animated" "~9.4.5-beta.1"
-    "@react-spring/core" "~9.4.5-beta.1"
-    "@react-spring/shared" "~9.4.5-beta.1"
-    "@react-spring/types" "~9.4.5-beta.1"
-
 "@rushstack/eslint-patch@1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.8.tgz#be3e914e84eacf16dbebd311c0d0b44aa1174c64"
@@ -2136,6 +2082,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+tabler-icons-react@^1.47.0:
+  version "1.47.0"
+  resolved "https://registry.yarnpkg.com/tabler-icons-react/-/tabler-icons-react-1.47.0.tgz#0f66735139b066fe54b426937085b6216dc1c7ee"
+  integrity sha512-XeVNNlccDC26nqZNtG3zpMOnhB+gecJCSUiYLxFqFUYnC5TIN3ClO1k6f9b26d+kzH+Z326la/3lMYjQ+xSvKg==
 
 text-table@^0.2.0:
   version "0.2.0"

@@ -1,7 +1,23 @@
+import {
+    ActionIcon,
+    Avatar,
+    Center,
+    createStyles,
+    Grid,
+    Group,
+    Stack,
+    Text,
+    Title,
+    useMantineColorScheme,
+} from "@mantine/core";
 import React from "react";
-import styles from "../../styles/Home.module.css";
-import { ParallaxLayer } from "@react-spring/parallax";
-import { createStyles, Title, Text } from "@mantine/core";
+import {
+    Sun,
+    MoonStars,
+    BrandTwitter,
+    BrandGithub,
+    BrandLinkedin,
+} from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
     subtitle: {
@@ -10,7 +26,6 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 500,
         lineHeight: 1.1,
         marginBottom: theme.spacing.md,
-        color: theme.black,
     },
 
     title: {
@@ -19,26 +34,56 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 900,
         lineHeight: 1.1,
         marginBottom: theme.spacing.md,
-        color: theme.black,
     },
 }));
 const Header = () => {
+    const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+
     const { classes } = useStyles();
     return (
-        <ParallaxLayer
-            offset={0}
-            speed={2}
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <header className="header">
-                <Title className={classes.title}>Hi, Im Joe </Title>
-                <Text className={classes.subtitle}>Full stack developer</Text>
-            </header>
-        </ParallaxLayer>
+        <header>
+            <Center>
+                <ActionIcon
+                    variant="outline"
+                    color={colorScheme === "dark" ? "yellow" : "blue"}
+                    onClick={() => toggleColorScheme()}
+                    title="Toggle color scheme"
+                >
+                    {colorScheme === "dark" ? (
+                        <Sun size={18} />
+                    ) : (
+                        <MoonStars size={18} />
+                    )}
+                </ActionIcon>
+            </Center>
+            <Title className={classes.title}>Hi, Im Joe </Title>
+            <Text className={classes.subtitle}>Full stack developer</Text>
+            <Stack>
+                <Group spacing="lg">
+                    <ActionIcon<"a">
+                        component="a"
+                        href="https://www.twitter.com/IamJoeMills"
+                    >
+                        <BrandTwitter />
+                    </ActionIcon>
+
+                    <ActionIcon<"a">
+                        component="a"
+                        href="https://www.github.com/millsjoe"
+                    >
+                        <BrandGithub />
+                    </ActionIcon>
+
+                    <ActionIcon<"a">
+                        component="a"
+                        href="https://www.linkedin.com/in/joe-mills/"
+                    >
+                        <BrandLinkedin />
+                    </ActionIcon>
+                    {/* <Avatar src="avatar.jpeg" radius="sm" /> */}
+                </Group>
+            </Stack>
+        </header>
     );
 };
 

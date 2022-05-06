@@ -1,4 +1,11 @@
-import { ThemeIcon, Text, Col, SimpleGrid } from "@mantine/core";
+import {
+    ThemeIcon,
+    Text,
+    Col,
+    SimpleGrid,
+    useMantineTheme,
+    useMantineColorScheme,
+} from "@mantine/core";
 import {
     SiTypescript,
     SiReact,
@@ -58,13 +65,19 @@ const skills = [
 ];
 
 export const Skills = () => {
+    const { colorScheme } = useMantineColorScheme();
+    const dark = colorScheme === "dark";
     const items = skills.map((skill) => (
         <div key={skill.name}>
             <ThemeIcon
-                size={44}
+                size="xl"
                 radius="md"
                 variant="gradient"
-                gradient={{ deg: 133, from: "red", to: "coral" }}
+                gradient={
+                    dark
+                        ? { deg: 133, from: "red", to: "coral" }
+                        : { deg: 133, from: "blue", to: "cyan" }
+                }
             >
                 <skill.icon size={26} />
             </ThemeIcon>
@@ -77,11 +90,7 @@ export const Skills = () => {
 
     return (
         <Col span={12} md={7}>
-            <SimpleGrid
-                cols={2}
-                spacing={30}
-                breakpoints={[{ maxWidth: "md", cols: 1 }]}
-            >
+            <SimpleGrid cols={4} spacing={30}>
                 {items}
             </SimpleGrid>
         </Col>
