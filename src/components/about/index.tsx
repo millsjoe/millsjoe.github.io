@@ -1,13 +1,5 @@
-import {
-    Grid,
-    Col,
-    Title,
-    SimpleGrid,
-    Text,
-    createStyles,
-} from "@mantine/core";
+import { createStyles, Grid, SimpleGrid, Text } from "@mantine/core";
 import React from "react";
-import Education from "../education";
 import { Experience } from "../experience";
 import { Skills } from "../skills";
 
@@ -18,7 +10,7 @@ const useStyles = createStyles((theme) => ({
 
     title: {
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontSize: 36,
+        fontSize: 24,
         fontWeight: 600,
         lineHeight: 1.1,
         marginBottom: theme.spacing.md,
@@ -27,18 +19,33 @@ const useStyles = createStyles((theme) => ({
 const About = () => {
     const { classes } = useStyles();
     return (
-        <div className={classes.wrapper}>
-            <Grid gutter={80}>
-                <Col span={12} md={5} sm={2} lg={5}>
-                    <Title className={classes.title} order={2}>
-                        Here is some of my experience
-                    </Title>
-                    <div className={classes.wrapper} />
+        <SimpleGrid
+            cols={2}
+            spacing="md"
+            breakpoints={[{ maxWidth: "sm", cols: 1 }]}
+        >
+            <Text>
+                {
+                    "I'm a software engineer and spend a lot of my time using TypeScript, React and NextJS. \
+                    I like making things fast, performant and efficient (mainly to make up for my disasterous design skills). \
+                    "
+                }
+            </Text>
+            <Grid gutter="md">
+                <Grid.Col>
+                    <Text className={classes.title}>
+                        {"I learnt a lot by working/studying here:"}
+                    </Text>
                     <Experience />
-                </Col>
-                <Skills />
+                </Grid.Col>
+                <Grid.Col span={12}>
+                    <Text className={classes.title}>
+                        {"These are some technologies I'm familiar with:"}
+                    </Text>
+                    <Skills />
+                </Grid.Col>
             </Grid>
-        </div>
+        </SimpleGrid>
     );
 };
 

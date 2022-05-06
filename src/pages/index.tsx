@@ -3,7 +3,9 @@ import {
     ColorScheme,
     ColorSchemeProvider,
     Container,
+    Divider,
     MantineProvider,
+    Space,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -24,10 +26,13 @@ const Home: NextPage = () => {
                 withGlobalStyles
                 withNormalizeCSS
             >
+                <Space h="sm" />
                 <Container>
                     <Center>
                         <Header />
                     </Center>
+                    <Divider />
+                    <Space h="sm" />
                     <About />
                 </Container>
             </MantineProvider>

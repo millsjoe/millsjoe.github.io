@@ -1,10 +1,9 @@
 import {
     ActionIcon,
-    Avatar,
-    Center,
     createStyles,
     Grid,
     Group,
+    Space,
     Stack,
     Text,
     Title,
@@ -12,11 +11,11 @@ import {
 } from "@mantine/core";
 import React from "react";
 import {
-    Sun,
-    MoonStars,
-    BrandTwitter,
     BrandGithub,
     BrandLinkedin,
+    BrandTwitter,
+    MoonStars,
+    Sun,
 } from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
@@ -26,6 +25,7 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 500,
         lineHeight: 1.1,
         marginBottom: theme.spacing.md,
+        marginLeft: -8,
     },
 
     title: {
@@ -42,7 +42,9 @@ const Header = () => {
     const { classes } = useStyles();
     return (
         <header>
-            <Center>
+            <Grid columns={2}>
+                <Title className={classes.title}>{"Hi, I'm Joe"} </Title>
+                <Space w="sm" />
                 <ActionIcon
                     variant="outline"
                     color={colorScheme === "dark" ? "yellow" : "blue"}
@@ -55,8 +57,7 @@ const Header = () => {
                         <MoonStars size={18} />
                     )}
                 </ActionIcon>
-            </Center>
-            <Title className={classes.title}>Hi, Im Joe </Title>
+            </Grid>
             <Text className={classes.subtitle}>Full stack developer</Text>
             <Stack>
                 <Group spacing="lg">
