@@ -10,6 +10,7 @@ import {
 import type { NextPage } from "next";
 import { useState } from "react";
 import About from "../components/about";
+import Experience from "../components/experience";
 import Header from "../components/header";
 
 const Home: NextPage = () => {
@@ -34,6 +35,8 @@ const Home: NextPage = () => {
                     <Divider />
                     <Space h="sm" />
                     <About />
+                    <Space h="md" />
+                    <Experience />
                 </Container>
             </MantineProvider>
         </ColorSchemeProvider>

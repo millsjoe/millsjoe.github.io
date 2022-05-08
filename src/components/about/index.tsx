@@ -1,6 +1,8 @@
-import { createStyles, Grid, SimpleGrid, Text } from "@mantine/core";
+import { createStyles, Grid, SimpleGrid, Stack, Text } from "@mantine/core";
 import React from "react";
-import { Experience } from "../experience";
+import { Football } from "../hobbies/football";
+import { Gaming } from "../hobbies/gaming";
+import { Movies } from "../hobbies/movies";
 import { Skills } from "../skills";
 
 const useStyles = createStyles((theme) => ({
@@ -24,20 +26,12 @@ const About = () => {
             spacing="md"
             breakpoints={[{ maxWidth: "sm", cols: 1 }]}
         >
-            <Text>
-                {
-                    "I'm a software engineer and spend a lot of my time using TypeScript, React and NextJS. \
-                    I like making things fast, performant and efficient (mainly to make up for my disasterous design skills). \
-                    "
-                }
-            </Text>
+            <Stack>
+                <Gaming />
+                <Football />
+                <Movies />
+            </Stack>
             <Grid gutter="md">
-                <Grid.Col>
-                    <Text className={classes.title}>
-                        {"I learnt a lot by working/studying here:"}
-                    </Text>
-                    <Experience />
-                </Grid.Col>
                 <Grid.Col span={12}>
                     <Text className={classes.title}>
                         {"These are some technologies I'm familiar with:"}

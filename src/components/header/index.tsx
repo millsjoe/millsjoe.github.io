@@ -45,18 +45,6 @@ const Header = () => {
             <Grid columns={2}>
                 <Title className={classes.title}>{"Hi, I'm Joe"} </Title>
                 <Space w="sm" />
-                <ActionIcon
-                    variant="outline"
-                    color={colorScheme === "dark" ? "yellow" : "blue"}
-                    onClick={() => toggleColorScheme()}
-                    title="Toggle color scheme"
-                >
-                    {colorScheme === "dark" ? (
-                        <Sun size={18} />
-                    ) : (
-                        <MoonStars size={18} />
-                    )}
-                </ActionIcon>
             </Grid>
             <Text className={classes.subtitle}>Full stack developer</Text>
             <Stack>
@@ -80,6 +68,18 @@ const Header = () => {
                         href="https://www.linkedin.com/in/joe-mills/"
                     >
                         <BrandLinkedin />
+                    </ActionIcon>
+                    <ActionIcon
+                        variant="outline"
+                        color={colorScheme === "dark" ? "orange" : "blue"}
+                        onClick={() => toggleColorScheme()}
+                        title="Toggle color scheme"
+                    >
+                        {colorScheme === "dark" ? (
+                            <Sun size={18} />
+                        ) : (
+                            <MoonStars size={18} />
+                        )}
                     </ActionIcon>
                     {/* <Avatar src="avatar.jpeg" radius="sm" /> */}
                 </Group>
