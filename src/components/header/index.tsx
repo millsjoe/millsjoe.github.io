@@ -1,90 +1,42 @@
-import {
-    ActionIcon,
-    createStyles,
-    Grid,
-    Group,
-    Space,
-    Stack,
-    Text,
-    Title,
-    useMantineColorScheme,
-} from "@mantine/core";
 import React from "react";
-import {
-    BrandGithub,
-    BrandLinkedin,
-    BrandTwitter,
-    MoonStars,
-    Sun,
-} from "tabler-icons-react";
+import styles from "./styles.module.css";
+import { BrandGithub, BrandLinkedin, BrandTwitter } from "tabler-icons-react";
 
-const useStyles = createStyles((theme) => ({
-    subtitle: {
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontSize: 32,
-        fontWeight: 500,
-        lineHeight: 1.1,
-        marginBottom: theme.spacing.md,
-        marginLeft: -8,
-    },
+// subtitle: {
+//     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+//     fontSize: 32,
+//     fontWeight: 500,
+//     lineHeight: 1.1,
+//     marginBottom: theme.spacing.md,
+//     marginLeft: -8,
+// },
 
-    title: {
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontSize: 36,
-        fontWeight: 900,
-        lineHeight: 1.1,
-        marginBottom: theme.spacing.md,
-    },
-}));
+// title: {
+//     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+//     fontSize: 36,
+//     fontWeight: 900,
+//     lineHeight: 1.1,
+//     marginBottom: theme.spacing.md,
+// },
 const Header = () => {
-    const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-
-    const { classes } = useStyles();
     return (
-        <header>
-            <Grid columns={2}>
-                <Title className={classes.title}>{"Hi, I'm Joe"} </Title>
-                <Space w="sm" />
-            </Grid>
-            <Text className={classes.subtitle}>Full stack developer</Text>
-            <Stack>
-                <Group spacing="lg">
-                    <ActionIcon<"a">
-                        component="a"
-                        href="https://www.twitter.com/IamJoeMills"
-                    >
-                        <BrandTwitter />
-                    </ActionIcon>
+        <div className={styles.header}>
+            <h1>{"Hi, I'm Joe"}</h1>
 
-                    <ActionIcon<"a">
-                        component="a"
-                        href="https://www.github.com/millsjoe"
-                    >
-                        <BrandGithub />
-                    </ActionIcon>
-
-                    <ActionIcon<"a">
-                        component="a"
-                        href="https://www.linkedin.com/in/joe-mills/"
-                    >
-                        <BrandLinkedin />
-                    </ActionIcon>
-                    <ActionIcon
-                        variant="outline"
-                        color={colorScheme === "dark" ? "orange" : "blue"}
-                        onClick={() => toggleColorScheme()}
-                        title="Toggle color scheme"
-                    >
-                        {colorScheme === "dark" ? (
-                            <Sun size={18} />
-                        ) : (
-                            <MoonStars size={18} />
-                        )}
-                    </ActionIcon>
-                    {/* <Avatar src="avatar.jpeg" radius="sm" /> */}
-                </Group>
-            </Stack>
-        </header>
+            <h2>Full stack developer</h2>
+            <div className={styles.icons}>
+                <a href="https://twitter.com/IAmJoeMills">
+                    <BrandTwitter />
+                </a>
+                <a href="https://github.com/millsjoe">
+                    <BrandGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/joemills/">
+                    <BrandLinkedin />
+                </a>
+            </div>
+            <hr className={styles.divider} />
+        </div>
     );
 };
 
