@@ -1,11 +1,11 @@
-import React from "react";
+import styles from "./styles.module.css";
+import globalStyles from "../../styles/globals.module.css";
 
-const Footer = () => {
+export const Footer = () => {
     return (
-        <footer className="footer">
-            <p>something</p>
-        </footer>
+        <div className={styles.footer}>
+            <hr className={globalStyles.divider} />
+            <h1>{"I'll add a footer here"}</h1>
+        </div>
     );
 };
-
-export default React.memo(Footer);
