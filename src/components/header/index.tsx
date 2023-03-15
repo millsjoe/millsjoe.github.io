@@ -1,23 +1,8 @@
 import React from "react";
 import styles from "./styles.module.css";
+import globalStyles from "../../styles/globals.module.css";
+
 import { BrandGithub, BrandLinkedin, BrandTwitter } from "tabler-icons-react";
-
-// subtitle: {
-//     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-//     fontSize: 32,
-//     fontWeight: 500,
-//     lineHeight: 1.1,
-//     marginBottom: theme.spacing.md,
-//     marginLeft: -8,
-// },
-
-// title: {
-//     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-//     fontSize: 36,
-//     fontWeight: 900,
-//     lineHeight: 1.1,
-//     marginBottom: theme.spacing.md,
-// },
 const Header = () => {
     return (
         <div className={styles.header}>
@@ -35,7 +20,7 @@ const Header = () => {
                     <BrandLinkedin />
                 </a>
             </div>
-            <hr className={styles.divider} />
+            <hr className={globalStyles.divider} />
         </div>
     );
 };
