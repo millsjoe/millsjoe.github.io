@@ -5,7 +5,7 @@
     justify-content: space-around;
 }
 
-.header > h1 {
+.header > h1, .header > h2 {
     margin: 0;
 }
 
@@ -15,5 +15,5 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: auto;
+    margin-top: 5px;
 }
