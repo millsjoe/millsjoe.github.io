@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
         <div className={styles.footer}>
             <hr className={globalStyles.divider} />
-            <h1>{"I'll add a footer here"}</h1>
+            <h6>{"This was meant to be a CV/Portfolio but the game is funnier"}</h6>
         </div>
     );
 };
